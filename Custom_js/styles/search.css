@@ -1,0 +1,125 @@
+.main-container {
+    display: flex;
+    align-items: stretch;
+    height: 100vh;
+}
+
+#search-container {
+    border: 2px solid var(--main-color-1);
+    padding: 60px;
+    margin: 20px;
+    border-radius: 15px;
+    background-color: var(--main-color-2);
+    color: white;
+}
+
+h2 {
+    font-size: var(--font-size-middle);
+}
+
+.type-search {
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+.type-search:focus {
+    outline: none;
+    border: 3px solid var(--main-color-4);
+}
+
+.category a{
+    font-size: var(--font-size-small);
+}
+
+.category a:visited{
+    color: var(--main-color-5);
+}
+
+.category a:hover{
+    color: var(--main-color-4);
+}
+
+.supplier-checkbox label{
+    font-size: var(--font-size-small);
+}
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: var(--main-color-4);    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: var(--main-color-3);  
+}
+
+.page-control-container {
+    margin: 20px;
+}
+
+.page-control-container li:first-child {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.page-control-container li:last-child {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.page-control {
+    display: flex;
+    text-align: center;
+    list-style: none;
+}
+
+.button {
+    border: 1px solid var(--main-color-2);
+    padding: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    border: 2px solid var(--main-color-3);
+}
+
+.page-control li {
+    padding: 5px;
+}
+
+.page-control li a {
+    font-size: var(--font-size-small);
+    text-decoration: none;
+    color: var(--main-color-2);
+}
+
+.page-control li a:hover {
+    color: var(--main-color-3);
+}
+
+.page-control li a:visited {
+    color: var(--main-color-2);
+}
+
+.current-page a {
+    color: var(--main-color-2);
+}

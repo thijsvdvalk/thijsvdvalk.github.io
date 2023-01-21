@@ -1,0 +1,29 @@
+.main-content-container {
+  padding: 30px 15vw;
+}
+
+.main-content-container h1 {
+  font-size: var(--font-size-header);
+}
+
+.main-content {
+  width: 100%;
+  border: 4px solid var(--main-color-2);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
+.title-container {
+  text-align: center;
+}
+
+.title-container p {
+  font-size: var(--font-size-small);
+}
+
+.items-container {
+  padding: 20px;
+  margin: 20px;
+}
+
