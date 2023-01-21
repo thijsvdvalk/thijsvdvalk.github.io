@@ -1,0 +1,85 @@
+:root {
+  --main-color-1: #00171f;
+  --main-color-2: #003459;
+  --main-color-3: #007ea7;
+  --main-color-4: #00a7e1;
+  --main-color-5: #ffffff;
+
+  --font-size-header: 40px;
+  --font-size-subheader: 32px;
+  --font-size-middle: 26px;
+  --font-size-small: 20px;
+  --font-size-text: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'burbank_big_condensedblack', 'Arial', sans-serif;
+  font-size: var(--font-size-middle);
+}
+
+html {
+  background-image: url('/images/background.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh; 
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 65px;
+  background-color: var(--main-color-2);
+  font-size: var(--font-size-small);
+}
+
+.header-item-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65px;
+}
+
+.header-item-container:hover {
+  background-color: var(--main-color-3);
+}
+
+a.header-item {
+  padding: 20px;
+  text-decoration: none;  
+  color: var(--main-color-5);
+  font-size: var(--font-size-middle);
+}
+
+.header-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button styling */
+.submit-button {
+  color: white;
+  border: none;
+  outline: none;
+  background-color: var(--main-color-4);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+  background-color: var(--main-color-3);
+}
