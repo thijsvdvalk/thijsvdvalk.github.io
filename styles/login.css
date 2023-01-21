@@ -17,7 +17,7 @@ h1 {
   font-size: var(--font-size-header);
 }
 
-.main input, .main a {
+.main input, .main a, .main select, .main label {
   font-size: var(--font-size-small);
   margin: 5px;
 }
@@ -31,6 +31,16 @@ h1 {
 .main .input-text:focus {
   outline: none;
   border: 3px solid var(--main-color-4);
+}
+
+.input-select {
+  width: 100%;
+}
+
+.gender {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main p {
@@ -54,3 +64,5 @@ h1 {
   text-align: center;
   margin: 10px;
 }
+
+
