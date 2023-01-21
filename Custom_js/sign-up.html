@@ -21,15 +21,21 @@
         <div class="sign-up-input">
           <div class="sign-up-input-divider">
             <input class="input-text" type="text" name="full-name-sign-up" id="full-name-sign-up" placeholder="Full name"><br>
-            <p id="full-name-text"></p>
+            <p class="validation-message" id="full-name-text"></p>
             <input class="input-text" type="text" name="user-id-sign-up" id="user-id-sign-up" placeholder="User ID"><br>
+            <p class="validation-message" id="user-id-text"></p>
             <input class="input-text" type="text" name="address-sign-up" id="address-sign-up" placeholder="Address"><br>
+            <!-- <p class="validation-message" id="address-text"></p> -->
             <input class="input-text" type="text" name="country-sign-up" id="country-sign-up" placeholder="Country"><br>
+            <p class="validation-message" id="country-text"></p>
             <input class="input-text" type="text" name="zip-code-sign-up" id="zip-code-sign-up" placeholder="ZIP code"><br>
+            <p class="validation-message" id="zip-code-text"></p>
           </div>
           <div class="sign-up-input-divider">
             <input class="input-text" type="text" name="language-sign-up" id="language-sign-up" placeholder="Language"><br>
+            <p class="validation-message" id="language-text"></p>
             <input class="input-text" type="text" name="bio-sign-up" id="bio-sign-up" placeholder="Bio"><br>
+            <!-- <p class="validation-message" id="bio-text"></p> -->
             <div class="gender">
               <label class="gender-label" for="gender-sign-up">Gender: </label>
               <select class="input-select" id="gender-sign-up" name="gender-sign-up">
@@ -37,14 +43,16 @@
                 <option value="male">Male</option>
                 <option value="other">Other</option>
               </select>
+              <!-- <p class="validation-message" id="gender-text"></p> -->
             </div>
             <input class="input-text" type="text" name="email-sign-up" id="email-sign-up" placeholder="Email"><br>
+            <p class="validation-message" id="email-text"></p>
             <input class="input-text" type="text" name="password-sign-up" id="password-sign-up" placeholder="Password"><br>
+            <p class="validation-message" id="password-text"></p>
           </div>
         </div>
         <div class="submit-button-container">
-          <input class="submit-button" value="Sign up" id="sign-up-button"><br>
-          <!-- <input class="submit-button" type="submit" value="Sign up" id="sign-up-button"><br> -->
+          <input class="submit-button" type="submit" value="Sign up" id="sign-up-button"><br>
         </div>
       </form>
       <a class="sign-up-link" href="./login.html">I already have an account</a>

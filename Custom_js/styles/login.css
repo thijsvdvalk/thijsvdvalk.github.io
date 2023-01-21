@@ -30,7 +30,7 @@ h1 {
 
 .main .input-text:focus {
   outline: none;
-  border: 3px solid var(--main-color-4);
+  border: 3px solid var(--main-color-4) !important;
 }
 
 .input-select {
@@ -76,4 +76,6 @@ h1 {
   margin: 5px;
 }
 
-
+.validation-message {
+  margin: 0px 8px 5px;
+}
