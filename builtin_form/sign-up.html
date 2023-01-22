@@ -20,29 +20,32 @@
       <form>
         <div class="sign-up-input">
           <div class="sign-up-input-divider">
-            <input class="input-text" type="text" name="full-name-sign-up" id="full-name-sign-up" placeholder="Full name"><br>
-            <input class="input-text" type="text" name="user-id-sign-up" id="user-id-sign-up" placeholder="User ID"><br>
+            <input class="input-text" type="text" name="full-name-sign-up" id="full-name-sign-up" placeholder="Full name" required><br>
+            <input class="input-text" type="text" name="user-id-sign-up" 
+              id="user-id-sign-up" placeholder="User ID" required minlength="5" maxlength="12"><br>
             <input class="input-text" type="text" name="address-sign-up" id="address-sign-up" placeholder="Address"><br>
-            <input class="input-text" type="text" name="country-sign-up" id="country-sign-up" placeholder="Country"><br>
-            <input class="input-text" type="text" name="zip-code-sign-up" id="zip-code-sign-up" placeholder="ZIP code"><br>
+            <input class="input-text" type="text" name="country-sign-up" id="country-sign-up" placeholder="Country" required><br>
+            <input class="input-text" type="text" name="zip-code-sign-up" 
+            id="zip-code-sign-up" placeholder="ZIP code" required minlength="6" maxlength="6"><br>
           </div>
           <div class="sign-up-input-divider">
-            <input class="input-text" type="text" name="language-sign-up" id="language-sign-up" placeholder="Language"><br>
+            <input class="input-text" type="text" name="language-sign-up" id="language-sign-up" placeholder="Language" required><br>
             <input class="input-text" type="text" name="bio-sign-up" id="bio-sign-up" placeholder="Bio"><br>
             <div class="gender">
               <label class="gender-label" for="gender-sign-up">Gender: </label>
-              <select class="input-select" id="gender-sign-up" name="gender-sign-up">
+              <select class="input-select" id="gender-sign-up" name="gender-sign-up" required>
                 <option value="female">Female</option>
                 <option value="male">Male</option>
                 <option value="other">Other</option>
               </select>
             </div>
-            <input class="input-text" type="text" name="email-sign-up" id="email-sign-up" placeholder="Email"><br>
-            <input class="input-text" type="text" name="password-sign-up" id="password-sign-up" placeholder="Password"><br>
+            <input class="input-text" type="text" name="email-sign-up" id="email-sign-up" placeholder="Email" required><br>
+            <input class="input-text" type="text" name="password-sign-up" id="password-sign-up" placeholder="Password" required minlength="12"><br>
           </div>
         </div>
         <div class="submit-button-container">
-          <input class="submit-button" value="Sign up" id="sign-up-button"><br>
+          <input type="submit" class="submit-button" value="Sign up" id="sign-up-button"><br>
+          <!-- <button class="submit-button" value="Sign up" id="sign-up-button" ></button> -->
           <!-- <input class="submit-button" type="submit" value="Sign up" id="sign-up-button"><br> -->
         </div>
       </form>
