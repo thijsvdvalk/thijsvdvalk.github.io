@@ -40,7 +40,7 @@ function containsNumber(input){
 function containsSpecialCharacter(input) {
   let out = "";
   for (c of input) {
-    if (!(uppercase.includes(c) || lowercase.includes(c) || numbers.includes(c))) {
+    if (!(uppercase.includes(c) || lowercase.includes(c) || numbers.includes(c)) && c != " ") {
       out += c;
     }
   }
