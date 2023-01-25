@@ -160,7 +160,7 @@ function passwordValidation(){
     valid(password, passwordText, "Looks good");
     return true;
   } else {
-    invalid(password, passwordText, "Bad");
+    invalid(password, passwordText, "Must contain number, uppercase, lowercase and special characters");
     return false;
   }
 }
