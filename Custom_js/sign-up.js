@@ -39,7 +39,8 @@ function containsNumber(input){
 
 function containsSpecialCharacter(input) {
   let out = "";
-  for (c of input) {
+  for (let i = 0; i < input.length; i++) {
+    let c = input[i];
     if (!(uppercase.includes(c) || lowercase.includes(c) || numbers.includes(c)) && c != " ") {
       out += c;
     }
