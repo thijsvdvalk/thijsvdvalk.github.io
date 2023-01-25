@@ -17,6 +17,10 @@ const address = document.getElementById("address-sign-up");
 const bio = document.getElementById("bio-sign-up");
 const gender = document.getElementById("gender-sign-up");
 
+const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const lowercase = uppercase.toLowerCase();
+const numbers = '0123456789';
+
 function valid(input, text, message){
   text.textContent = message;
   text.style.color = "green";
@@ -145,3 +149,5 @@ submitButton.addEventListener('click', (event) => {
       `);
   }
 });
+
+
