@@ -100,10 +100,11 @@ function countryValidation() {
 }
 
 function zipCodeValidation() {
-  if(/^\s*$/.test(zipCode.value)){
+  if(zipCode.value == 0){
     invalid(zipCode, zipCodeText, "Required");
     return false;
-  } else if(/[0-9]{4}\s*[a-zA-Z]{2}$/.test(zipCode.value)){
+  } else if(zipCode.value.length == 6 && numbers.contains(zipCode.value[0]) && numbers.contains(zipCode.value[1]) && 
+    numbers.contains(zipCode.value[2]) && numbers.contains(zipCode.value[3]) && uppercase.contains(zipCode.value[4].toUppercase()) && uppercase.contains(zipCode.value[5].toUppercase())){
     valid(zipCode, zipCodeText, "Looks good");
     return true;
   } else {
@@ -113,10 +114,10 @@ function zipCodeValidation() {
 }
 
 function languageValidation(){
-  if(/^\s*$/.test(language.value)){
+  if (language.value == 0){
     invalid(language, languageText, "Required");
     return false;
-  } else if(/^[a-zA-Z]+$/.test(language.value)){
+  } else if(!containsSpecialCharacter(language.value) && !containsNumber(language.value)){
     valid(language, languageText, "Looks good");
     return true;
   } else {
@@ -126,10 +127,10 @@ function languageValidation(){
 }
 
 function emailValidation(){
-  if(/^\s*$/.test(email.value)){
+  if(email.value == 0){
     invalid(email, emailText, "Required");
     return false;
-  } else if(/^[a-zA-Z0-9]+([\_\.\-]?[a-zA-Z0-9])*@[a-zA-Z0-9]+([\_\.\-]?[a-zA-Z0-9])*\.[a-zA-Z]{2,}$/.test(email.value)){
+  } else if(email.value.contains('@') && email.value[0] != '@' && email.value[email.value.length - 1] != '@' && email.value[email.value.length - 1] != '.' && email.value.indexOf('.') > email.value.indexOf('@') + 1){
     valid(email, emailText, "Looks good");
     return true;
   } else {
@@ -139,15 +140,15 @@ function emailValidation(){
 }
 
 function passwordValidation(){
-  if(/^\s*$/.test(password.value)){
+  if(password.value.length == 0){
     invalid(password, passwordText, "Required");
     return false;
-  } else if(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{12,}$/.test(password.value) && password.value.length<14){
+  } else if(containsLowerCase(password.value) && containsNumber(password.value) && containsSpecialCharacter(password.value) && containsUpperCase(password.value) && password.value.length<14){
     passwordText.textContent = "Weak, could be better";
     passwordText.style.color = "orange";
     password.style.border = "3px solid orange";
     return true;
-  } else if(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{12,}$/.test(password.value) && password.value.length>=14){
+  } else if(containsLowerCase(password.value) && containsNumber(password.value) && containsSpecialCharacter(password.value) && containsUpperCase(password.value) && password.value.length >= 14){
     valid(password, passwordText, "Looks good");
     return true;
   } else {
