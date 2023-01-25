@@ -69,7 +69,7 @@ function fullNameValidation() {
     valid(fullName, fullNameText, "Looks good");
     return true;
   } else {
-    invalid(fullName, fullNameText, "Invalid, can't have special characters");
+    invalid(fullName, fullNameText, "Invalid, can't have special characters or numbers");
     return false;
   }
 }
