@@ -22,11 +22,11 @@ const lowercase = uppercase.toLowerCase();
 const numbers = '0123456789';
 
 function containsLowerCase(input){
-  return input.toUppercase() != input;
+  return input.toUpperCase() != input;
 }
 
 function containsUpperCase(input){
-  return input.toLowercase() != input
+  return input.toLowerCase() != input
 }
 
 function containsNumber(input){
@@ -107,7 +107,7 @@ function zipCodeValidation() {
     invalid(zipCode, zipCodeText, "Required");
     return false;
   } else if(zipCode.value.length == 6 && numbers.includes(zipCode.value[0]) && numbers.includes(zipCode.value[1]) && 
-    numbers.includes(zipCode.value[2]) && numbers.includes(zipCode.value[3]) && uppercase.includes(zipCode.value[4].toUppercase()) && uppercase.includes(zipCode.value[5].toUppercase())){
+    numbers.includes(zipCode.value[2]) && numbers.includes(zipCode.value[3]) && uppercase.includes(zipCode.value[4].toUpperCase()) && uppercase.includes(zipCode.value[5].toUpperCase())){
     valid(zipCode, zipCodeText, "Looks good");
     return true;
   } else {
