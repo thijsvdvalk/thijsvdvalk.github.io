@@ -22,11 +22,11 @@ const lowercase = uppercase.toLowerCase();
 const numbers = '0123456789';
 
 function containsLowerCase(input){
-  return input.toUppercase() != input;
+  return input.toUpperCase() != input;
 }
 
 function containsUpperCase(input){
-  return input.toLowercase() != input
+  return input.toLowerCase() != input
 }
 
 function containsNumber(input){
