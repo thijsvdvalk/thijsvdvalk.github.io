@@ -60,7 +60,7 @@ function invalid(input, text, message){
 }
 
 function fullNameValidation() {
-  console.log(fullName.value);
+  // 
   if(fullName.value.trim().length == 0){
     invalid(fullName, fullNameText, "Required");
     return false;
@@ -75,7 +75,7 @@ function fullNameValidation() {
 
 function userIDValidation() {
   let length = userID.value.length
-  let lastChar = userID(length-1)
+  let lastChar = userID[length-1]
   if(userID.value.trim().length == 0){
     invalid(userID, userIDText, "Required");
     return false;
