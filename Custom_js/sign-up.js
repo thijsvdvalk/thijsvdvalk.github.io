@@ -60,10 +60,10 @@ function invalid(input, text, message){
 }
 
 function fullNameValidation() {
-  if(/^\s*$/.test(fullName.value)){
+  if(fullName.value.trim().length == 0){
     invalid(fullName, fullNameText, "Required");
     return false;
-  } else if(/^[a-zA-Z ]+$/.test(fullName.value)){
+  } else if(!containsNumber(fullName.value) && !containsSpecialCharacter(fullName.value)){
     valid(fullName, fullNameText, "Looks good");
     return true;
   } else {
@@ -73,10 +73,12 @@ function fullNameValidation() {
 }
 
 function userIDValidation() {
-  if(/^\s*$/.test(userID.value)){
+  let length = userID.value.length
+  let lastChar = userID(length-1)
+  if(userID.value.trim().length == 0){
     invalid(userID, userIDText, "Required");
     return false;
-  } else if(/^[A-Z]{1}.{3,10}[^a-zA-Z]{1}$/.test(userID.value)){
+  } else if(length >= 5 && length <= 12 && uppercase.contains(userID.value(0)) && (numbers.contains(userID.value(length-1)) || containsSpecialCharacter(lastChar))){
     valid(userID, userIDText, "Looks good");
     return true;
   } else {
@@ -87,10 +89,10 @@ function userIDValidation() {
 }
 
 function countryValidation() {
-  if(/^\s*$/.test(country.value)){
+  if(country.value.trim().length == 0){
     invalid(country, countryText, "Required");
     return false;
-  } else if(/^[a-zA-Z]+$/.test(country.value)){
+  } else if(!containsNumber(country.value) && !containsSpecialCharacter(country.value)){
     valid(country, countryText, "Looks good");
     return true;
   } else {
