@@ -21,6 +21,18 @@ const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const lowercase = uppercase.toLowerCase();
 const numbers = '0123456789';
 
+function containsLowerCase(input){
+  return input.toUppercase() != input;
+}
+
+function containsUpperCase(input){
+  return input.tuLowercase != input
+}
+
+function containsNumber(input){
+  
+}
+
 function valid(input, text, message){
   text.textContent = message;
   text.style.color = "green";
