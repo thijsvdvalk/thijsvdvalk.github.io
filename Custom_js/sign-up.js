@@ -146,7 +146,11 @@ function passwordValidation(){
   if(password.value.length == 0){
     invalid(password, passwordText, "Required");
     return false;
-  } else if(containsLowerCase(password.value) && containsNumber(password.value) && containsSpecialCharacter(password.value) && containsUpperCase(password.value) && password.value.length<14){
+  } 
+  else if (password.value.length < 12) {
+    invalid(password, passwordText, "Too short");
+  }
+  else if(containsLowerCase(password.value) && containsNumber(password.value) && containsSpecialCharacter(password.value) && containsUpperCase(password.value) && password.value.length<14){
     passwordText.textContent = "Weak, could be better";
     passwordText.style.color = "orange";
     password.style.border = "3px solid orange";
