@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet" href="./styles/login.css">
   <link rel="stylesheet" href="./webfontkit-20230108-135131/stylesheet.css">
-  <script src="sign-up.js" defer></script>
 </head>
 <body>
   <div class="main-container">
@@ -22,17 +21,22 @@
           <div class="sign-up-input-divider">
             <input class="input-text" type="text" name="full-name-sign-up" 
             id="full-name-sign-up" placeholder="Full name" required pattern="^[a-zA-Z ]+$"><br>
+            <p class="validation-message" id="full-name-text">Invalid, can't have special characters or numbers</p>
             <input class="input-text" type="text" name="user-id-sign-up" pattern="^[A-Z]{1}.{3,10}[^a-zA-Z]{1}$"
               id="user-id-sign-up" placeholder="User ID" required minlength="5" maxlength="12"><br>
+            <p class="validation-message" id="user-id-text">Invalid, Starts with Capital, ends with special character or number and 5-12 characters long</p>
             <input class="input-text" type="text" name="address-sign-up" id="address-sign-up" placeholder="Address"><br>
             <input class="input-text" type="text" name="country-sign-up" pattern="^[a-zA-Z]+$"
             id="country-sign-up" placeholder="Country" required><br>
+            <p class="validation-message" id="country-text">Invalid country</p>
             <input class="input-text" type="text" name="zip-code-sign-up" pattern="[0-9]{4}\s*[a-zA-Z]{2}$"
             id="zip-code-sign-up" placeholder="ZIP code" required minlength="6" maxlength="6"><br>
+            <p class="validation-message" id="zip-code-text">Invalid ZIP code</p>
           </div>
           <div class="sign-up-input-divider">
             <input class="input-text" type="text" name="language-sign-up" pattern="^[a-zA-Z]+$"
              id="language-sign-up" placeholder="Language" required><br>
+             <p class="validation-message" id="language-text">Can't have special characters or numbers</p>
             <input class="input-text" type="text" name="bio-sign-up" id="bio-sign-up" placeholder="Bio"><br>
             <div class="gender">
               <label class="gender-label" for="gender-sign-up">Gender: </label>
@@ -43,10 +47,12 @@
               </select>
             </div>
             <input class="input-text" type="text" name="email-sign-up" id="email-sign-up" placeholder="Email"
-             pattern="^[a-zA-Z0-9]+([\_\.\-]?[a-zA-Z0-9])*@[a-zA-Z0-9]+([\_\.\-]?[a-zA-Z0-9])*\.[a-zA-Z]{2,}$"
+             pattern="^[a-zA-Z0-9]+([_\.\-]?[a-zA-Z0-9])*@[a-zA-Z0-9]+([_\.\-]?[a-zA-Z0-9])*\.[a-zA-Z]{2,}$"
             required><br>
+            <p class="validation-message" id="email-text">Invalid email</p>
             <input class="input-text" type="text" name="password-sign-up" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{12,}$"
             id="password-sign-up" placeholder="Password" required minlength="12"><br>
+            <p class="validation-message" id="password-text">Must contain number, uppercase, lowercase and special characters and minimum length of 14</p>
           </div>
         </div>
         <div class="submit-button-container">

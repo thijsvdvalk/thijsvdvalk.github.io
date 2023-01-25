@@ -21,15 +21,20 @@
         <div class="sign-up-input">
           <div class="sign-up-input-divider">
             <input class="input-text" type="text" name="full-name-sign-up" id="full-name-sign-up" placeholder="Full name" required><br>
+            <p class="validation-message" id="full-name-text">Invalid, can't have special characters or numbers</p>
             <input class="input-text" type="text" name="user-id-sign-up" 
               id="user-id-sign-up" placeholder="User ID" required minlength="5" maxlength="12"><br>
+              <p class="validation-message" id="user-id-text">Invalid, Starts with Capital, ends with special character or number and 5-12 characters long</p>
             <input class="input-text" type="text" name="address-sign-up" id="address-sign-up" placeholder="Address"><br>
             <input class="input-text" type="text" name="country-sign-up" id="country-sign-up" placeholder="Country" required><br>
+            <p class="validation-message" id="country-text">Invalid country</p>
             <input class="input-text" type="text" name="zip-code-sign-up" 
             id="zip-code-sign-up" placeholder="ZIP code" required minlength="6" maxlength="6"><br>
+            <p class="validation-message" id="zip-code-text">Invalid ZIP code</p>
           </div>
           <div class="sign-up-input-divider">
             <input class="input-text" type="text" name="language-sign-up" id="language-sign-up" placeholder="Language" required><br>
+            <p class="validation-message" id="language-text">Can't have special characters or numbers</p>
             <input class="input-text" type="text" name="bio-sign-up" id="bio-sign-up" placeholder="Bio"><br>
             <div class="gender">
               <label class="gender-label" for="gender-sign-up">Gender: </label>
@@ -40,7 +45,9 @@
               </select>
             </div>
             <input class="input-text" type="text" name="email-sign-up" id="email-sign-up" placeholder="Email" required><br>
+            <p class="validation-message" id="email-text">Invalid email</p>
             <input class="input-text" type="text" name="password-sign-up" id="password-sign-up" placeholder="Password" required minlength="12"><br>
+            <p class="validation-message" id="password-text">Must contain number, uppercase, lowercase and special characters and minimum length of 14</p>
           </div>
         </div>
         <div class="submit-button-container">

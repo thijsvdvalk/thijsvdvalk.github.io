@@ -125,7 +125,7 @@ function languageValidation(){
     valid(language, languageText, "Looks good");
     return true;
   } else {
-    invalid(language, languageText, "Can't have special characters");
+    invalid(language, languageText, "Can't have special characters or numbers");
     return false;
   }
 }
