@@ -31,7 +31,7 @@ function containsUpperCase(input){
 
 function containsNumber(input){
   for(let i = 0; i<input.length; i++){
-    if(numbers.contans(input[i])){
+    if(numbers.includes(input[i])){
       return true;
     }
   } return false;
@@ -40,7 +40,7 @@ function containsNumber(input){
 function containsSpecialCharacter(input) {
   let out = "";
   for (c of input) {
-    if (!(uppercase.contains(c) || lowercase.contains(c) || numbers.contains(c))) {
+    if (!(uppercase.includes(c) || lowercase.includes(c) || numbers.includes(c))) {
       out += c;
     }
   }
@@ -60,6 +60,7 @@ function invalid(input, text, message){
 }
 
 function fullNameValidation() {
+  console.log(fullName.value);
   if(fullName.value.trim().length == 0){
     invalid(fullName, fullNameText, "Required");
     return false;
@@ -78,7 +79,7 @@ function userIDValidation() {
   if(userID.value.trim().length == 0){
     invalid(userID, userIDText, "Required");
     return false;
-  } else if(length >= 5 && length <= 12 && uppercase.contains(userID.value[0]) && (numbers.contains(userID.value[length-1]) || containsSpecialCharacter(lastChar))){
+  } else if(length >= 5 && length <= 12 && uppercase.includes(userID.value[0]) && (numbers.includes(userID.value[length-1]) || containsSpecialCharacter(lastChar))){
     valid(userID, userIDText, "Looks good");
     return true;
   } else {
@@ -105,8 +106,8 @@ function zipCodeValidation() {
   if(zipCode.value.length == 0){
     invalid(zipCode, zipCodeText, "Required");
     return false;
-  } else if(zipCode.value.length == 6 && numbers.contains(zipCode.value[0]) && numbers.contains(zipCode.value[1]) && 
-    numbers.contains(zipCode.value[2]) && numbers.contains(zipCode.value[3]) && uppercase.contains(zipCode.value[4].toUppercase()) && uppercase.contains(zipCode.value[5].toUppercase())){
+  } else if(zipCode.value.length == 6 && numbers.includes(zipCode.value[0]) && numbers.includes(zipCode.value[1]) && 
+    numbers.includes(zipCode.value[2]) && numbers.includes(zipCode.value[3]) && uppercase.includes(zipCode.value[4].toUppercase()) && uppercase.includes(zipCode.value[5].toUppercase())){
     valid(zipCode, zipCodeText, "Looks good");
     return true;
   } else {
@@ -132,7 +133,7 @@ function emailValidation(){
   if(email.value.length == 0){
     invalid(email, emailText, "Required");
     return false;
-  } else if(email.value.contains('@') && email.value[0] != '@' && email.value[email.value.length - 1] != '@' && email.value[email.value.length - 1] != '.' && email.value.indexOf('.') > email.value.indexOf('@') + 1){
+  } else if(email.value.includes('@') && email.value[0] != '@' && email.value[email.value.length - 1] != '@' && email.value[email.value.length - 1] != '.' && email.value.indexOf('.') > email.value.indexOf('@') + 1){
     valid(email, emailText, "Looks good");
     return true;
   } else {
