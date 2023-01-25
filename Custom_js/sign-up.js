@@ -26,7 +26,7 @@ function containsLowerCase(input){
 }
 
 function containsUpperCase(input){
-  return input.tuLowercase != input
+  return input.toLowercase() != input
 }
 
 function containsNumber(input){
