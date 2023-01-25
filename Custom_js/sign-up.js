@@ -33,6 +33,16 @@ function containsNumber(input){
   
 }
 
+function containsSpecialCharacter(input) {
+  let out = "";
+  for (c of input) {
+    if (!(uppercase.contains(c) || lowercase.contains(c) || numbers.contains(c))) {
+      out += c;
+    }
+  }
+  return out.length != 0;
+}
+
 function valid(input, text, message){
   text.textContent = message;
   text.style.color = "green";
