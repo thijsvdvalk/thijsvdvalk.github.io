@@ -69,23 +69,23 @@ function fullNameValidation() {
     valid(fullName, fullNameText, "Looks good");
     return true;
   } else {
-    invalid(fullName, fullNameText, "Invalid");
+    invalid(fullName, fullNameText, "Invalid, can't have special characters");
     return false;
   }
 }
 
 function userIDValidation() {
   let length = userID.value.length
-  let lastChar = userID[length-1]
+  let lastChar = userID.value[length-1]
   if(userID.value.trim().length == 0){
     invalid(userID, userIDText, "Required");
     return false;
-  } else if(length >= 5 && length <= 12 && uppercase.includes(userID.value[0]) && (numbers.includes(userID.value[length-1]) || containsSpecialCharacter(lastChar))){
+  } else if(length >= 5 && length <= 12 && uppercase.includes(userID.value[0]) && (numbers.includes(lastChar) || containsSpecialCharacter(lastChar))){
     valid(userID, userIDText, "Looks good");
     return true;
   } else {
-    invalid(userID, userIDText, "Invalid");
-    // invalid(userID, userIDText, "Invalid, Starts with Capital, ends with special character or number and 5-12 characters long");
+    // invalid(userID, userIDText, "Invalid, must start with capital, ends with special character or number");
+    invalid(userID, userIDText, "Invalid, Starts with Capital, ends with special character or number and 5-12 characters long");
     return false;
   }
 }
@@ -98,7 +98,7 @@ function countryValidation() {
     valid(country, countryText, "Looks good");
     return true;
   } else {
-    invalid(country, countryText, "Invalid");
+    invalid(country, countryText, "Invalid country");
     return false;
   }
 }
@@ -112,7 +112,7 @@ function zipCodeValidation() {
     valid(zipCode, zipCodeText, "Looks good");
     return true;
   } else {
-    invalid(zipCode, zipCodeText, "Invalid");
+    invalid(zipCode, zipCodeText, "Invalid ZIP code");
     return false;
   }
 }
@@ -125,7 +125,7 @@ function languageValidation(){
     valid(language, languageText, "Looks good");
     return true;
   } else {
-    invalid(language, languageText, "Invalid");
+    invalid(language, languageText, "Can't have special characters");
     return false;
   }
 }
@@ -138,7 +138,7 @@ function emailValidation(){
     valid(email, emailText, "Looks good");
     return true;
   } else {
-    invalid(email, emailText, "Invalid");
+    invalid(email, emailText, "Invalid email");
     return false;
   }
 }
