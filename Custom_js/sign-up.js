@@ -30,7 +30,11 @@ function containsUpperCase(input){
 }
 
 function containsNumber(input){
-  
+  for(let i = 0; i<input.length; i++){
+    if(numbers.contans(input(i))){
+      return true;
+    }
+  } return false;
 }
 
 function containsSpecialCharacter(input) {
