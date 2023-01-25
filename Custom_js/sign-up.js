@@ -103,7 +103,7 @@ function countryValidation() {
 }
 
 function zipCodeValidation() {
-  if(zipCode.value.length == 0){
+  if(zipCode.value.trim().length == 0){
     invalid(zipCode, zipCodeText, "Required");
     return false;
   } else if(zipCode.value.length == 6 && numbers.includes(zipCode.value[0]) && numbers.includes(zipCode.value[1]) && 
@@ -117,7 +117,7 @@ function zipCodeValidation() {
 }
 
 function languageValidation(){
-  if (language.value.length == 0){
+  if (language.value.trim().length == 0){
     invalid(language, languageText, "Required");
     return false;
   } else if(!containsSpecialCharacter(language.value) && !containsNumber(language.value)){
@@ -130,7 +130,7 @@ function languageValidation(){
 }
 
 function emailValidation(){
-  if(email.value.length == 0){
+  if(email.value.trim().length == 0){
     invalid(email, emailText, "Required");
     return false;
   } else if(email.value.includes('@') && email.value[0] != '@' && email.value[email.value.length - 1] != '@' && email.value[email.value.length - 1] != '.' && email.value.indexOf('.') > email.value.indexOf('@') + 1){
@@ -143,7 +143,7 @@ function emailValidation(){
 }
 
 function passwordValidation(){
-  if(password.value.length == 0){
+  if(password.value.trim().length == 0){
     invalid(password, passwordText, "Required");
     return false;
   } 
