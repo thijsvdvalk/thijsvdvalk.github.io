@@ -45,17 +45,17 @@
                 </h1>
             </div>
         
-            <form action="input">
+            <form action="/add-item" method="post">
                 <label for="fcategory">Category:</label> <br>
                 <input class="input-text" type="text" name="category" id="fcategory">
                 <label for="fname">Item name:</label> <br>
-                <input class="input-text" type="text" id="fname" name="name"> <br>
+                <input class="input-text" type="text" id="fname" name="name" required> <br>
                 <label for="fdescription">Description:</label> <br>
-                <textarea class="input-text" name="description" id="fdescription" rows="4" cols="20"></textarea> <br>
+                <textarea class="input-text" name="description" id="fdescription" rows="4" cols="20" required></textarea> <br>
                 <label for="fquantity">Quantity:</label> <br>
-                <input class="input-text" type="number" id="fquantity" name="quantity"> <br>
+                <input class="input-text" type="number" id="fquantity" name="quantity" min="1" required> <br>
                 <label for="fprice">Price:</label> <br>
-                <input class="input-text" type="number" id="fprice" name="price" step="0.01"> <br>
+                <input class="input-text" type="number" id="fprice" name="price" step="0.01" min="0.01" required> <br>
                 <label for="fphoto">Photo:</label> <br>
                 <input type="file" id="fphoto" name="photo"> <br>
                 <div class="submit-button-container">
