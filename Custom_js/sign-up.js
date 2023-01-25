@@ -31,7 +31,7 @@ function containsUpperCase(input){
 
 function containsNumber(input){
   for(let i = 0; i<input.length; i++){
-    if(numbers.contans(input(i))){
+    if(numbers.contans(input[i])){
       return true;
     }
   } return false;
@@ -78,7 +78,7 @@ function userIDValidation() {
   if(userID.value.trim().length == 0){
     invalid(userID, userIDText, "Required");
     return false;
-  } else if(length >= 5 && length <= 12 && uppercase.contains(userID.value(0)) && (numbers.contains(userID.value(length-1)) || containsSpecialCharacter(lastChar))){
+  } else if(length >= 5 && length <= 12 && uppercase.contains(userID.value[0]) && (numbers.contains(userID.value[length-1]) || containsSpecialCharacter(lastChar))){
     valid(userID, userIDText, "Looks good");
     return true;
   } else {
